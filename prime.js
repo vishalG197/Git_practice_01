@@ -1,20 +1,14 @@
-//Check Prime Number Using Functions.
-function checkprime(number){
-  let count = 0;
-  let nonprime = 0;
-  for(let i = 2; i <= number; i++){
-    if(number % i === 0){
-      count++
+function prime(num){
+        let factor=0;
+        
+        for(let i=2;i<=Math.sqrt(num);i++){
+           if(num%i==0){ factor++;
+        }}
+        if(factor==0){
+            return true;
+        }else{
+            return false;
+        }
+        return false;
     }
-    else{
-      nonprime++
-    }
-  }
-  if (count === 1){
-    return number + ' ' + 'is a Prime Number';
-  }
-  else{
-    return number + ' ' + 'is not a Prime Number';
-  }
-}
-console.log(checkprime(7))
+    //console.log(prime(7));
